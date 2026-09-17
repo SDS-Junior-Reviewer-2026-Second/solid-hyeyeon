@@ -1,6 +1,6 @@
 package birds;
 
-public class Penguin implements Bird {
+public class Penguin implements Moltable {
     String currentLocation;
     int numberOfFeathers;
 
@@ -10,10 +10,6 @@ public class Penguin implements Bird {
 
     public void molt() {
         this.numberOfFeathers -= 1;
-    }
-
-    public void fly() {
-        throw new UnsupportedOperationException();
     }
 
     public void swim() {

@@ -1,21 +1,17 @@
 package greeter;
 
 public class Greeter {
-    String formality;
+    BasicMode mode;
 
-    public String greet() {
-        if (this.formality == "formal") {
-            return "Good evening, sir.";
-        } else if (this.formality == "casual") {
-            return "Sup bro?";
-        } else if (this.formality == "intimate") {
-            return "Hello Darling!";
-        } else {
-            return "Hello.";
-        }
+    Greeter(){
+        mode = new BasicMode();
     }
 
-    public void setFormality(String formality) {
-        this.formality = formality;
+    public String greet() {
+        return mode.greet();
+    }
+
+    public void setFormality(BasicMode mode) {
+        this.mode = mode;
     }
 }
